@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Introduction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: .5rem;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: .5rem;
+            margin-bottom: 1rem;
+        }
+        .contact-form button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: .5rem 1rem;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Welcome to my personal website</p>
+    </header>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>Hello! I'm Your Name. I'm a [Your Profession] with a passion for [Your Interests]. I enjoy [Your Hobbies] and love to [Any Other Personal Info].</p>
+        </section>
+        <section>
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
