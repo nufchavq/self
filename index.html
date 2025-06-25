@@ -1,151 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oleksii Tregubov - Experienced IT Product Consultant</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .navbar {
-            background-color: #1e3a8a; /* Dark blue */
-        }
-        .navbar-brand {
-            color: white;
-        }
-        .navbar-brand:hover {
-            color: #d1d5db; /* Light gray */
-        }
-        header {
-            background: #1e3a8a; /* Dark blue */
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 3rem;
-        }
-        header p {
-            font-size: 1.5rem;
-        }
-        .btn-primary {
-            background-color: #e11d48; /* Red */
-            border-color: #e11d48;
-        }
-        .btn-primary:hover {
-            background-color: #be123c; /* Darker red */
-            border-color: #be123c;
-        }
-        .contact-form {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        footer {
-            background: #1e3a8a; /* Dark blue */
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        .social-icons a {
-            color: white;
-            margin: 0 0.5rem;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #d1d5db; /* Light gray */
-        }
-        .image-section {
-            text-align: center;
-            margin: 3rem 0;
-        }
-        .image-section img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 1.5rem;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #e11d48; /* Red */
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        ul li {
-            margin-bottom: 1rem;
-        }
-        ul li::marker {
-            color: #e11d48; /* Red bullet points */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Oleksii Tregubov - IT Product Consultant</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    :root { --primary: #1e3a8a; --danger: #e11d48; --light-gray: #f4f4f4; --dark-gray: #333; }
+    body { font-family: 'Roboto', sans-serif; background-color: var(--light-gray); color: var(--dark-gray); scroll-behavior: smooth; }
+    .navbar { background-color: var(--primary); }
+    .navbar-brand { font-weight: 700; }
+    #hero { position: relative; height: 80vh; overflow: hidden; }
+    #hero .carousel-item img { object-fit: cover; width: 100%; height: 80vh; }
+    #hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1; }
+    .hero-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 2; color: #fff; }
+    .hero-text img { width: 180px; height: 180px; object-fit: cover; border: 5px solid #fff; background: #fff; border-radius: 50%; }
+    section h2 { color: var(--primary); margin-bottom: 1.5rem; font-weight: 500; }
+    .card-icon { font-size: 2rem; color: var(--danger); margin-bottom: 1rem; }
+    .list-group-item { border: none; padding-left: 0; }
+    footer { background-color: var(--primary); }
+    .social-icons a { color: #fff; margin: 0 0.5rem; font-size: 1.5rem; transition: color 0.3s; }
+    .social-icons a:hover { color: var(--light-gray); }
+    .map-container { width: 100%; height: 300px; margin-top: 1rem; }
+    #map { width: 100%; height: 100%; }
+  </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">Oleksii Tregubov</a>
-    </nav>
-    <header>
-        <h1>Oleksii Tregubov</h1>
-        <p>IT Product Consultant</p>
-    </header>
-    <main class="container mt-5">
-        <section style="max-width: 900px; margin: 0 auto;">
-            <h2>ABOUT ME</h2>
-            <p>Hello! I'm Oleksii. I'm an experienced IT consultant with a passion for helping businesses leverage technology to achieve their goals with a strong focus on Product Management. I have experience in various areas including software development, product and project management, and cloud computing.</p>
-            <p>With over 13 years of experience, I have helped different companies launch multiple products, both B2B and B2C, from scratch.</p>
-            <p>My core competencies are focused around Travel and Real Estate business domains with additional experience in Media Buying.</p>
-            <p>I help businesses create awesome products and projects. I manage tech teams and facilitate effective communication that ensures maximum visibility of the project to all stakeholders using <b>Lean-Agile</b> frameworks, such as Kanban and Scrum. Have the ability to figure out solutions in the midst of chaos.</p>
-            <ul>
-                <li><b>Research backed product strategy:</b> From market research to development. I observe and analyze behavior transforming it into actionable insights.</li>
-                <li><b>Agile framework and design Sprints:</b> Whether conceptualizing on a new product or an existing one, I solve problems and iterate engaging ideas.</li>
-                <li><b>Leadership mastery towards the goal:</b> Leadership is more than delegating tasks, but beyond that, a leader should help to create a collaborative work environment.</li>
-                <li><b>Managed multicultural teams:</b> Being bilingual helps me to combine the best of both worlds, coming up with creative solutions and having more empathy.</li>
-            </ul>
-            <p>Feel free to contact me at <a href="mailto:nufchavq@outlook.com">nufchavq@outlook.com</a> or through the form below:</p>
-        </section>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Oleksii Tregubov</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-
-
-        <section style="max-width: 900px; margin: 0 auto;">
-            <h2>CONTACT ME</h2>
-            <form class="contact-form mx-auto" style="max-width: 600px;" >
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Send</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Oleksii Tregubov</p>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/mrlemieux66" target="_blank" title="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
+  <section id="hero">
+    <div id="heroCarousel" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner h-100">
+        <div class="carousel-item active">
+          <img src="https://i.ibb.co/PZckfyDs/Monosnap-marvin-meyer-SYTO3xs06f-U-unsplash-jpg-2025-06-25-5-PM-02-54.jpg" alt="Technology collaboration">
         </div>
-    </footer>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <div class="carousel-item">
+          <img src="https://i.ibb.co/LzjvSp0n/markus-winkler-Ir-Rb-SND5-EUc-unsplash.jpg" alt="Innovative solutions">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.ibb.co/FqnRCRkB/luca-bravo-XJXWbf-So2f0-unsplash.jpg" alt="Success achievement">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <div class="hero-text">
+      <img src="https://i.ibb.co/0jCHCgK1/IMG-3785-2.jpg" alt="Photo placeholder">
+      <h1 class="display-4 fw-bold mt-3">Oleksii Tregubov</h1>
+      <p class="lead">Experienced IT Product Consultant</p>
+      <a href="#about" class="btn btn-danger btn-lg mt-3">Learn More</a>
+    </div>
+  </section>
+
+  <main class="container py-5">
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="https://i.ibb.co/tM65hyDj/glenn-carstens-peters-npx-XWg-Q33-ZQ-unsplash.jpg" class="img-fluid rounded shadow-sm mb-4 mb-md-0" alt="Coding illustration">
+        </div>
+        <div class="col-md-6">
+          <p>Hello! I'm Oleksii. I'm an experienced IT consultant with a passion for helping businesses leverage technology to achieve their goals with a strong focus on Product Management.</p>
+          <p>With over 13 years of experience, I have helped different companies launch multiple products, both B2B and B2C, from scratch.</p>
+          <p>My core competencies are focused around Travel and Real Estate business domains with additional experience in Media Buying.</p>
+          <p>I manage tech teams and facilitate effective communication using <strong>Lean-Agile</strong> frameworks like Kanban and Scrum.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="mt-5" data-aos="fade-up" data-aos-delay="100">
+      <h2>Core Competencies</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col"><div class="card border-0 shadow-sm p-4 h-100"><i class="fas fa-search card-icon"></i><h5>Research-Backed Strategy</h5><p>From market analysis to actionable insights that inform product direction.</p></div></div>
+        <div class="col"><div class="card border-0 shadow-sm p-4 h-100"><i class="fas fa-sync-alt card-icon"></i><h5>Agile Sprints & Iteration</h5><p>Rapid prototyping and continuous improvement through Scrum and design sprints.</p></div></div>
+        <div class="col"><div class="card border-0 shadow-sm p-4 h-100"><i class="fas fa-users card-icon"></i><h5>Leadership & Team Management</h5><p>Guiding multicultural teams to achieve project goals.</p></div></div>
+        <div class="col"><div class="card border-0 shadow-sm p-4 h-100"><i class="fas fa-globe card-icon"></i><h5>Domain Expertise</h5><p>Deep knowledge in Travel, Real Estate, and Media Buying industries.</p></div></div>
+      </div>
+    </section>
+
+    <section id="contact" class="mt-5" data-aos="fade-up" data-aos-delay="200">
+      <h2>Contact Me</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="list-group">
+            <a href="mailto:nufchavq@outlook.com" class="list-group-item list-group-item-action"><i class="fas fa-envelope me-2"></i> nufchavq@outlook.com</a>
+            <a href="tel:+380732578002" class="list-group-item list-group-item-action"><i class="fas fa-phone me-2"></i> +380 73 257 8002</a>
+            <div class="mt-3">
+              <p><i class="fas fa-map-marker-alt me-2"></i>Full Address</p>
+              <address class="ms-4">
+                Region: Kharkivska<br>
+                City: Kharkiv<br>
+                Avenue: Zhukovskoho<br>
+                Building: 7, fl 22<br>
+                Postal Code: 61000<br>
+                Country: Ukraine
+              </address>
+            </div>
+            <div class="map-container"><div id="map"></div></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <form class="p-4 bg-white rounded shadow-sm">
+            <div class="mb-3"><label for="name" class="form-label">Name</label><input type="text" class="form-control" id="name" required></div>
+            <div class="mb-3"><label for="email" class="form-label">Email</label><input type="email" class="form-control" id="email" required></div>
+            <div class="mb-3"><label for="message" class="form-label">Message</label><textarea class="form-control" id="message" rows="4" required></textarea></div>
+            <button type="submit" class="btn btn-danger w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-white text-center py-4">
+    <div class="container"><p class="mb-0">&copy; 2025 Oleksii Tregubov</p></div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    var map = L.map('map').setView([50.0036, 36.2298], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors' }).addTo(map);
+    L.marker([50.0036, 36.2298]).addTo(map);
+  </script>
 </body>
 </html>
